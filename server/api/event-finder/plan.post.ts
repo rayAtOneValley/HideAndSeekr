@@ -422,7 +422,7 @@ ${body.notes ? `Notes: ${body.notes}` : ""}
 `.trim();
 
     // Step 1 — Event Discovery
-    const discoveryMessage = `Find 2-3 of the best matching nearby events for this user. Return only the top 2 or 3 events that best match their preferences — quality over quantity.\n\n${userContext}`;
+    const discoveryMessage = `Find the best matching nearby events for this user. Return only the top 10 events that best match their preferences — quality over quantity.\n\n${userContext}`;
     console.log("\n=== [Agent 1] Event Discovery — Request ===");
     console.log(discoveryMessage);
     const discoveryRaw = await runAgent(AGENT_IDS.eventDiscovery, discoveryMessage);
